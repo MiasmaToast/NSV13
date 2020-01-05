@@ -67,8 +67,7 @@
 	
 /obj/item/clothing/suit/ship/peacekeeper/Initialize() // lets all the peacekeeper armour carry security items. Most pertinent for the HoS' jacket.
 	. = ..()
-	if(allowed)
-		allowed = GLOB.security_vest_allowed
+	allowed = GLOB.security_vest_allowed
 
 /obj/item/clothing/suit/ship/peacekeeper/jacket
 	name = "Peacekeeper jacket"
