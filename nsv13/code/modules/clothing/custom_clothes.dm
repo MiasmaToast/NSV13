@@ -64,6 +64,11 @@
 	max_integrity = 250
 	resistance_flags = NONE
 	armor = list("melee" = 30, "bullet" = 40, "laser" = 0, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 60)
+	
+/obj/item/clothing/suit/ship/peacekeeper/Initialize() // lets all the peacekeeper armour carry security items. Most pertinent for the HoS' jacket.
+	. = ..()
+	if(allowed)
+		allowed = GLOB.security_vest_allowed
 
 /obj/item/clothing/suit/ship/peacekeeper/jacket
 	name = "Peacekeeper jacket"
